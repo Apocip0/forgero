@@ -1,6 +1,9 @@
 package com.sigmundgranaas.forgero.smithingrework.recipe;
 
 import com.google.gson.JsonObject;
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.DataResult;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.sigmundgranaas.forgero.smithingrework.item.custom.LiquidMetalCrucibleItem;
 
 import net.minecraft.inventory.SimpleInventory;
@@ -14,7 +17,11 @@ import net.minecraft.recipe.ShapedRecipe;
 import net.minecraft.registry.DynamicRegistryManager;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.JsonHelper;
+import net.minecraft.util.dynamic.Codecs;
 import net.minecraft.world.World;
+
+import java.util.List;
+
 
 public class MetalMoldRecipe implements Recipe<SimpleInventory> {
 	public static final String ID = "metal_mold";
@@ -37,11 +44,7 @@ public class MetalMoldRecipe implements Recipe<SimpleInventory> {
 
 	@Override
 	public boolean matches(SimpleInventory inventory, World world) {
-		ItemStack crucible = inventory.getStack(1);
-		return mold.test(inventory.getStack(0))
-				&& crucible.getItem() instanceof LiquidMetalCrucibleItem crucibleItem
-				&& crucibleItem.hasMoreOrEqualLiquid(crucible, liquidAmount)
-				&& crucibleItem.getLiquidType(crucible).equals(liquid);
+		return mold.test(inventory.getStack(0));
 	}
 
 	@Override

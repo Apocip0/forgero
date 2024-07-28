@@ -1,6 +1,5 @@
 package com.sigmundgranaas.forgero.smithingrework.block.entity;
 
-import static com.sigmundgranaas.forgero.smithingrework.ForgeroSmithingInitializer.MOLD_BLOCK_ENTITY;
 
 import com.sigmundgranaas.forgero.smithingrework.block.custom.MoldBlock;
 
@@ -14,6 +13,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import static com.sigmundgranaas.forgero.smithingrework.block.entity.ModBlockEntities.MOLD_BLOCK;
+
 public class MoldBlockEntity extends BlockEntity {
 	private Identifier liquid;
 	private int liquidAmount;
@@ -23,7 +24,7 @@ public class MoldBlockEntity extends BlockEntity {
 	private ItemStack result;
 
 	public MoldBlockEntity(BlockPos pos, BlockState state) {
-		super(MOLD_BLOCK_ENTITY, pos, state);
+		super(MOLD_BLOCK, pos, state);
 	}
 
 	public static void tick(World world, BlockPos pos, BlockState state, MoldBlockEntity be) {

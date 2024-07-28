@@ -1,6 +1,8 @@
 package com.sigmundgranaas.forgero.smithingrework.block;
 
 import com.sigmundgranaas.forgero.core.Forgero;
+import com.sigmundgranaas.forgero.smithingrework.block.custom.BloomeryBlock;
+import com.sigmundgranaas.forgero.smithingrework.block.custom.MoldBlock;
 import com.sigmundgranaas.forgero.smithingrework.block.custom.SmithingAnvil;
 
 import net.minecraft.block.Block;
@@ -17,6 +19,12 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 public class ModBlocks {
 	public static final Block SMITHING_ANVIL = registerBlock("smithing_anvil",
 			new SmithingAnvil(FabricBlockSettings.copyOf(Blocks.ANVIL)));
+
+	public static final Block BLOOMERY = registerBlock("bloomery",
+			new BloomeryBlock(FabricBlockSettings.copyOf(Blocks.FURNACE)));
+
+	public static final Block MOLD_BLOCK = registerBlock("mold_block",
+			new MoldBlock(FabricBlockSettings.copyOf(Blocks.FURNACE)));
 
 	private static Block registerBlock(String name, Block block) {
 		registerBlockItem(name, block);

@@ -1,4 +1,4 @@
-package com.sigmundgranaas.forgero.smithingrework.block.entity;
+package com.sigmundgranaas.forgero.smithingrework.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 

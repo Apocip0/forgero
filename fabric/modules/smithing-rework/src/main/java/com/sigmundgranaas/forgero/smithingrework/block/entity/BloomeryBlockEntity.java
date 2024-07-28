@@ -1,12 +1,14 @@
 package com.sigmundgranaas.forgero.smithingrework.block.entity;
 
-import static com.sigmundgranaas.forgero.smithingrework.ForgeroSmithingInitializer.BLOOMERY_BLOCK_ENTITY;
+import static com.sigmundgranaas.forgero.smithingrework.block.entity.ModBlockEntities.BLOOMERY_BLOCK;
 
 import java.util.Optional;
 
 import com.sigmundgranaas.forgero.smithingrework.block.custom.BloomeryBlock;
 import com.sigmundgranaas.forgero.smithingrework.item.custom.LiquidMetalCrucibleItem;
 import com.sigmundgranaas.forgero.smithingrework.recipe.MetalSmeltingRecipe;
+
+import com.sigmundgranaas.forgero.smithingrework.screen.BloomeryScreenHandler;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -31,7 +33,7 @@ public class BloomeryBlockEntity extends BlockEntity implements NamedScreenHandl
 
 
 	public BloomeryBlockEntity(BlockPos pos, BlockState state) {
-		super(BLOOMERY_BLOCK_ENTITY, pos, state);
+		super(BLOOMERY_BLOCK, pos, state);
 		this.propertyDelegate = new PropertyDelegate() {
 			@Override
 			public int get(int index) {

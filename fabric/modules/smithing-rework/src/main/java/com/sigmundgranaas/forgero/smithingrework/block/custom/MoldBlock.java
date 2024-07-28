@@ -1,6 +1,6 @@
 package com.sigmundgranaas.forgero.smithingrework.block.custom;
 
-import static com.sigmundgranaas.forgero.smithingrework.ForgeroSmithingInitializer.MOLD_BLOCK_ENTITY;
+import static com.sigmundgranaas.forgero.smithingrework.block.entity.ModBlockEntities.MOLD_BLOCK;
 
 import com.sigmundgranaas.forgero.smithingrework.block.entity.MoldBlockEntity;
 
@@ -84,7 +84,7 @@ public class MoldBlock extends BlockWithEntity {
 
 	@Override
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-		return checkType(type, MOLD_BLOCK_ENTITY, MoldBlockEntity::tick);
+		return checkType(type, MOLD_BLOCK, MoldBlockEntity::tick);
 	}
 
 

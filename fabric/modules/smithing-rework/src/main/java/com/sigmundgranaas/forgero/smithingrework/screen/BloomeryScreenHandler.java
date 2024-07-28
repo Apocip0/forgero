@@ -1,8 +1,10 @@
-package com.sigmundgranaas.forgero.smithingrework.block.entity;
+package com.sigmundgranaas.forgero.smithingrework.screen;
 
-import static com.sigmundgranaas.forgero.smithingrework.ForgeroSmithingInitializer.BLOOMERY_SCREEN_HANDLER;
 import static com.sigmundgranaas.forgero.smithingrework.block.entity.BloomeryInventory.CRUCIBLE_SLOT;
 import static com.sigmundgranaas.forgero.smithingrework.block.entity.BloomeryInventory.INGREDIENT_SLOT;
+import static com.sigmundgranaas.forgero.smithingrework.screen.ModScreenHandlers.BLOOMERY_SCREEN_HANDLER;
+
+import com.sigmundgranaas.forgero.smithingrework.block.entity.BloomeryInventory;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;

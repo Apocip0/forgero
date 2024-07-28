@@ -1,6 +1,6 @@
 package com.sigmundgranaas.forgero.smithingrework.block.custom;
 
-import static com.sigmundgranaas.forgero.smithingrework.ForgeroSmithingInitializer.BLOOMERY_BLOCK_ENTITY;
+import static com.sigmundgranaas.forgero.smithingrework.block.entity.ModBlockEntities.BLOOMERY_BLOCK;
 
 import com.sigmundgranaas.forgero.smithingrework.block.entity.BloomeryBlockEntity;
 
@@ -15,7 +15,6 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -144,6 +143,6 @@ public class BloomeryBlock extends BlockWithEntity implements BlockEntityProvide
 
 	@Override
 	public <T extends BlockEntity> BlockEntityTicker<T> getTicker(World world, BlockState state, BlockEntityType<T> type) {
-		return checkType(type, BLOOMERY_BLOCK_ENTITY, (world1, pos, state1, be) -> BloomeryBlockEntity.tick(world, pos, state1, be));
+		return checkType(type, BLOOMERY_BLOCK, (world1, pos, state1, be) -> BloomeryBlockEntity.tick(world, pos, state1, be));
 	}
 }
