@@ -1,0 +1,33 @@
+{
+  "type": "PICKAXE_HEAD",
+  "models": [
+    {
+      "name": "pickaxe_head_material",
+      "type": "GENERATE",
+      "palette": "MATERIAL",
+      "variants": [
+        {
+          "target": [
+            "model:hammer_head.png"
+          ],
+          "template": "hammer_head_reinforcement.png"
+        }
+      ]
+    },
+    {
+      "name": "hammer_head",
+      "type": "GENERATE",
+      "template": "hammer_head.png",
+      "palette": "TOOL_MATERIAL",
+      "order": 20
+    },
+    {
+      "target": [
+        "type:TOOL_MATERIAL",
+        "name:hammer_head-schematic"
+      ],
+      "modelType": "BASED_COMPOSITE",
+      "template": "hammer_head"
+    }
+  ]
+}
